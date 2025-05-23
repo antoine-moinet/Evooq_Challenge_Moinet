@@ -7,17 +7,17 @@ openai.api_key = OPENAI_API_KEY
 
 class OpenAIChatter:
     tl = {
-            "gpt-4": 8192,
-            "gpt-4-0613": 8192,
-            "gpt-4-32k": 32768,
-            "gpt-4-32k-0613": 32768,
-            "gpt-4-1106-preview": 128000,  
-            "gpt-4-turbo": 128000,        
-            "gpt-3.5-turbo": 4096,
-            "gpt-3.5-turbo-0613": 4096,
-            "gpt-3.5-turbo-1106": 16385,   
-        }
-    
+        "gpt-4": 8192,
+        "gpt-4-0613": 8192,
+        "gpt-4-32k": 32768,
+        "gpt-4-32k-0613": 32768,
+        "gpt-4-1106-preview": 128000,  
+        "gpt-4-turbo": 128000,        
+        "gpt-3.5-turbo": 4096,
+        "gpt-3.5-turbo-0613": 4096,
+        "gpt-3.5-turbo-1106": 16385,
+    }
+
     def __init__(self, context, query, chat_model):
         self.model = chat_model
         self.token_limit = self.tl.get(self.model, 8192)
